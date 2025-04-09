@@ -1,36 +1,37 @@
 #include <iostream>
 
-int main(){
+int main() {
+    int paradas{1};
+    double km{0}, litros{0};
+    double totaldelitros{0}, totalkm{0};
 
-int paradas{1};
-double km{0}, litros{0};
+    while (true) {
+        std::cout << "\nParada " << paradas << std::endl;
 
+        std::cout << "Digite a quilometragem rodada desde o último abastecimento (-1 para encerrar): ";
+        std::cin >> km;
 
-while(1){
+        if (km == -1) break;
 
-    std::cout << "Parada " << paradas << std::endl;
+        std::cout << "Digite a quantidade de litros abastecidos: ";
+        std::cin >> litros;
 
-    std::cout << "Digite a quilometragem rodada desde o último abastecimento (-1 para encerrar):";
-    std::cin >> km ;
+        if (litros <= 0) {
+            std::cout << "Quantidade de litros inválida!" << std::endl;
+            continue;
+        }
 
-    if (km == -1) exit(1);
+        double consumo = km / litros;
+        totaldelitros += litros;
+        totalkm += km;
 
-    std::cout << "Digite a quantidade de litros abastecidos:";
-    std::cin >> litros;
+        std::cout << "Consumo atual: " << consumo << " Km/L" << std::endl;
+        std::cout << "Total de litros: " << totaldelitros << " L" << std::endl;
+        std::cout << "Total rodado: " << totalkm << " Km" << std::endl;
 
-    paradas++;
+        paradas++;
+    }
 
-    double consumo = km / litros;
-
-    double totaldelitros = totaldelitros + litros;
-    double totalkm = totalkm +km;
-    
-    std::cout << "Consumo atual: " << consumo << " Km/Litros" << std::endl;
-    std::cout << "Total de litros: " << totaldelitros << " L" << std::endl;
-    std::cout << "Total de rodado: " << totalkm << " Km" << std::endl;
-}
-
+    std::cout << "\nEncerrando programa..." << std::endl;
     return 0;
 }
-
-
