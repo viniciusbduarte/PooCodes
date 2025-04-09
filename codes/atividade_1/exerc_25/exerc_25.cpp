@@ -13,12 +13,17 @@ int main() {
 
         if (km == -1) break;
 
+        if (km <= -1) {
+            std::cout << "Quantidade de Km inválida!" << std::endl;
+            continue;   
+        }
+
         std::cout << "Digite a quantidade de litros abastecidos: ";
         std::cin >> litros;
 
         if (litros <= 0) {
             std::cout << "Quantidade de litros inválida!" << std::endl;
-            continue;
+            continue;   
         }
 
         double consumo = km / litros;
