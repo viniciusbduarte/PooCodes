@@ -12,7 +12,9 @@ int main() {
         for(int j = 0; j<i; j++) asterisco();
     pulalinha();
     }    
+    pulalinha();
 
+    
     //padrão 2
     for (int i = 5; i>=0; i--){
         for( int k = 0; k<(5-i); k++) espaco();
@@ -22,7 +24,19 @@ int main() {
 
  
 
+    //padrão 3
+    int asterisco_padrao3[] = {1, 3, 5, 3, 1};
+    int espaco_padrao3[] = {2, 1, 0, 1, 2};
 
+    for (int i = 0; i < 5; i++) {
+        for (int k = 0; k<espaco_padrao3[i]; k++){
+            espaco();
+        }
+        for (int k = 0; k<asterisco_padrao3[i]; k++){
+            asterisco();
+        }
+        pulalinha();
+    }
 
 
     return 0;
