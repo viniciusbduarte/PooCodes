@@ -37,7 +37,23 @@ int main() {
         }
         pulalinha();
     }
+    pulalinha();
 
+    //padrão 4
+    int asterisco_padrao4[] = {1, 3, 5, 7};
+    int espaco_padrao4[] = {3, 2, 1, 0};
+
+    for (int i = 0; i < 4; i++) {
+        for (int k = 0; k<espaco_padrao4[i]; k++){
+            espaco();
+        }
+        for (int k = 0; k<asterisco_padrao4[i]; k++){
+            asterisco();
+        }
+        pulalinha();
+    }
+
+    
 
     return 0;
 }
