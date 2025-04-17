@@ -16,10 +16,6 @@ void desenhar_padrao(int espaco_padrao[], int asterisco_padrao[], int tamanho){
     std::cout << std::endl;
 }
 
-
-
-
-
 int main() {
     
     int asterisco_padrao1[] = {1, 2, 3, 4, 5};
