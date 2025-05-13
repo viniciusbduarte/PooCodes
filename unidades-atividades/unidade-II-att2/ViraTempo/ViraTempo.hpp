@@ -5,10 +5,13 @@
 class ViraTempo{
 private:
     int tempo;
-    int incremento = 1;
+    int incremento;
+    int limite;
 public:
+
     ViraTempo(int t);
     void virarTempo();
     void avancarTempo();
     void mostrarTempo();
 };
+

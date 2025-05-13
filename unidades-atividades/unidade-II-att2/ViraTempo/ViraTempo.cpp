@@ -5,8 +5,7 @@
 using namespace std;
 
 
-ViraTempo::ViraTempo(int t): tempo(t){}
-
+ViraTempo::ViraTempo(int t): tempo(0), incremento(1), limite(t) {}
 
 
 void ViraTempo::virarTempo(){
@@ -14,10 +13,13 @@ void ViraTempo::virarTempo(){
 }
 
 
-void ViraTempo::avancarTempo(){
+void ViraTempo::avancarTempo(){    
+    if ((tempo == 0 && incremento < 0) || (tempo == limite && limite != 0 && incremento > 0)) {
+        virarTempo();
+    }
     tempo = tempo + incremento;
-
 }
+
 
 
 
