@@ -5,7 +5,7 @@
 
 int main(){
      
-Varinha varinhaqualquer("qdwadw","dadwadw", 2);
+Varinha varinhaqualquer{};
 
 varinhaqualquer.setTipoMadeira("Madeira");
 varinhaqualquer.setNucleo("sla ome");
